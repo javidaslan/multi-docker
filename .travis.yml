@@ -14,7 +14,7 @@ after_success:
   - docker build -t javidaslan/multi-server ./server
   - docker build -t javidaslan/multi-worker ./worker
 
-  # Login to docker CLI
+  # push to docker HUB
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push javidaslan/multi-client
   - docker push javidaslan/multi-nginx
